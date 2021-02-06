@@ -1,11 +1,16 @@
 <?php 
-  include "../../config/dbconfig.php";  
-    
+  include "../config/dbconfig.php";  
+   
   
   // <!-- register ngo here, push into db -->
   $errors = array(); 
-  if (isset($_POST['register_ngo'])) {
-		  
+  if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+		 
+    $t_ownerfirstname = $_POST["ownerfirstname"];
+    $t_ownerlastname = $_POST["ownerlastname"];
+    $t_owneremail = $_POST["owneremail"];
+    $t_ownercontact = $_POST["ownercontact"];
+    
     $t_ngoname = $_POST["ngoname"];
     $t_ngocontact = $_POST["ngocontact"]; 
     $t_ngoemail = $_POST["ngoemail"];
@@ -14,9 +19,7 @@
     $t_ngopin = $_POST["ngopin"];
     $t_ngoid = $_POST['ngoid'];
 
-
-    $t_ngofile = $_FILES['ngofile'];
-    $t_ngoprofile = $_FILES['ngoprofile']; 
+    $t_ngofile = $_FILES['ngofile']; 
 
     //print_r($t_ngofile);   
     //Array ( [name] => registered_NGO.sql [type] => application/octet-stream [tmp_name] => C:\xampp\tmp\php32A4.tmp [error] => 0 [size] => 5510 )
@@ -24,7 +27,10 @@
     
 
 
- 
+
+  if (empty($t_ownerfirstname)) { array_push($errors, "Firstname is required"); }
+  if (empty($t_owneremail)) { array_push($errors, "Email is required"); }
+  if (empty($t_ownercontact)) { array_push($errors, "Owner Mobile number is required"); }
   if (empty($t_ngoemail)) { array_push($errors, "NGO Email is required"); }
   if (empty($t_ngocontact)) { array_push($errors, "NGO Mobile number is required"); }
   if (empty($t_ngoname)) { array_push($errors, "NGO is required"); }
@@ -52,21 +58,8 @@
         $file_store_location = "../assets/applied_ngo_uploaded_document/".$t_ngoname. ' ' .$file_name; 
         move_uploaded_file($file_tmp_loc, $file_store_location);
 
-
-
-        $p_file_name = $t_ngoprofile[name];
-        $p_file_type = $t_ngoprofile[type];
-        $p_file_size = $t_ngoprofile[size];
-        $p_file_tmp_loc = $t_ngoprofile[tmp_name];
-        $p_file_store_location = "../assets/img/ngo_profile_pic/".$t_ngoname. ' ' .$p_file_name; 
-        move_uploaded_file($p_file_tmp_loc, $p_file_store_location);
-
-        $ngo_profile_pic_name =$t_ngoname. ' ' .$p_file_name;
-        
-        if (empty($p_file_name)) { $ngo_profile_pic_name= 'prof.jpg';}
-
-        $sql = "INSERT INTO `ngotable` (`owneremail`,`ngoname`, `ngocontact`, `ngoemail`, `ngoaddress`, `ngocity`, `ngopin`, `ngofile`,`ngoid`) 
-        VALUES ('$t_owneremail', '$t_ngoname', '$t_ngocontact', '$t_ngoemail', '$t_ngoaddress', '$t_ngocity', '$t_ngopin','$ngo_profile_pic_name', '$t_ngoid')";
+        $sql = "INSERT INTO `ngotable` (`ownerfirstname`, `ownerlastname`, `owneremail`, `ownercontact`, `ngoname`, `ngocontact`, `ngoemail`, `ngoaddress`, `ngocity`, `ngopin`, `ngofile`,`ngoid`, `ngostatus`) 
+        VALUES ('$t_ownerfirstname', '$t_ownerlastname', '$t_owneremail', '$t_ownercontact', '$t_ngoname', '$t_ngocontact', '$t_ngoemail', '$t_ngoaddress', '$t_ngocity', '$t_ngopin','$t_ngofile', '$t_ngoid', '1')";
         $resultt =  mysqli_query($conn, $sql);
         
         header("Location: #");
