@@ -15,9 +15,9 @@ SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!
 
 We are currently working as a team and try to help community so that no one sleep empty stomach.
 
-## Screenshot of website
+## Screenshot  
 
-![GitHub Logo](markdown-demo/home.png)
+![GitHub Logo](markdown-demo/pic.jpeg)
  
 
 ## Features
@@ -57,7 +57,7 @@ We are currently working as a team and try to help community so that no one slee
        >> *  &emsp; a) He can see calorific values of all the food he has registered
        >> *  &emsp; b) if any food it near to expire he will be notified and ask if he can use it or better to donate
        >> *  &emsp; c) If he want to donate, just click donate button in front of food item, and this food will be donated to his selected NGO.    
-       >> * ![GitHub Logo](markdown-demo/profile.png)   
+       >> * ![GitHub Logo](markdown-demo/profile_donar.png)   
     * > NGO
        >> * If DONAR is login, redirect to NGO profile page
        >> * If not login redirect to login page
@@ -68,7 +68,7 @@ We are currently working as a team and try to help community so that no one slee
        >> * Containing all the registered NGO's by owner with registration date, profile image, name etc.  
        >> * NGO owner can register his NGO by submitting form register NGO on profile page of NGO.
        >> * After submitting form he can see his status of registration on his profile page.   
-       >> * ![GitHub Logo](markdown-demo/ngoprofile.png)   
+       >> * ![GitHub Logo](markdown-demo/ngo.png)   
     * > ADMIN
        >> * After login, redirect to ADMINprofile page  
        >> * After verification of NGO which is submitted by NGO owner ADMIN will publish this NGO to portal, which will be displayed on registered NGO.   
@@ -108,7 +108,8 @@ We are currently working as a team and try to help community so that no one slee
    * Can find other info related to food-filler.     
 
 ---
-
+## Website Pic
+![GitHub Logo](markdown-demo/home.png)
 ## Technology stacks used in project: Web Technology
 *  Frontend
    * HTML
