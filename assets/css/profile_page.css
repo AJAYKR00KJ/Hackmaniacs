@@ -10,7 +10,7 @@ body {
 }
 
 .profile-nav .user-heading {
-    background: #006494;
+    background: #FF7733;
     color: #fff;
     border-radius: 4px 4px 0 0;
     -webkit-border-radius: 4px 4px 0 0;
@@ -65,7 +65,7 @@ body {
 
 .profile-nav ul > li > a:hover, .profile-nav ul > li > a:focus, .profile-nav ul li.active  a {
     background: #f8f7f5 !important;
-    border-left: 5px solid #006494;
+    border-left: 5px solid #FF7733;
     color: #89817f !important;
 }
 
@@ -104,7 +104,7 @@ body {
 }
 
 .bio-graph-heading {
-    background: #006494;
+    background: #FF7733;
     color: #fff;
     font-weight: bold;
     text-align: center;
@@ -151,7 +151,7 @@ body {
 }
 
 .card-header{
-    background-color: #006494;
+    background-color: #FF7733;
     color:white;
 }
  

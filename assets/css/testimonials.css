@@ -14,7 +14,7 @@ body {
   }
   
   a {
-    color: #006494;
+    color: #FF7733;
   }
   
   a:hover {
@@ -45,7 +45,7 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50px;
-    background: #006494;
+    background: #FF7733;
     color: #fff;
     transition: all 0.4s;
   }
@@ -111,10 +111,10 @@ body {
     #header {
       box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
       top: 0;
-      background: #006494;
+      background: #FF7733;
     }
     #header.header-scrolled, #header .header-container {
-      background: #006494;
+      background: #FF7733;
     }
     #header .logo h1 {
       font-size: 24px;
@@ -150,12 +150,12 @@ body {
   }
   
   .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-    color: #006494;
+    color: #FF7733;
     text-decoration: none;
   }
   
   .nav-menu .get-started a {
-    background: #006494;
+    background: #FF7733;
     color: #fff;
     border-radius: 50px;
     margin: 0 15px;
@@ -200,7 +200,7 @@ body {
   }
   
   .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-    color: #006494;
+    color: #FF7733;
   }
   
   .nav-menu .drop-down > a:after {
@@ -295,7 +295,7 @@ body {
   }
   
   .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-    color: #006494;
+    color: #FF7733;
     text-decoration: none;
   }
   
@@ -304,7 +304,7 @@ body {
   }
   
   .mobile-nav .get-started a {
-    background: #006494;
+    background: #FF7733;
     color: #fff;
     border-radius: 50px;
     margin: 0 15px;
@@ -427,8 +427,8 @@ body {
   }
   
   #hero .btn-get-started:hover {
-    background: #006494;
-    border: 2px solid #006494;
+    background: #FF7733;
+    border: 2px solid #FF7733;
   }
   
   @media (min-width: 1024px) {
@@ -474,7 +474,7 @@ body {
     display: block;
     width: 50px;
     height: 3px;
-    background: #006494;
+    background: #FF7733;
     bottom: 0;
     left: 0;
   }
@@ -570,7 +570,7 @@ body {
   }
   
   .testimonials .owl-dot.active {
-    background-color: #006494 !important;
+    background-color: #FF7733 !important;
   }
   
   @media (max-width: 767px) {
@@ -642,11 +642,11 @@ body {
     margin-top:10px;
   }
   .table-dark tr:nth-child(even) {
-    background-color: #006494;
+    background-color: #FF7733;
   }
   
   .table-dark tr:nth-child(odd) :hover {
-    background-color: #006494;
+    background-color: #FF7733;
   }
   
   @media (max-width: 768px) {
@@ -737,7 +737,7 @@ body {
   
   #footer .footer-top .footer-links ul a:hover {
     text-decoration: none;
-    color: #006494;
+    color: #FF7733;
   }
   
   #footer .footer-newsletter {
@@ -777,7 +777,7 @@ body {
     background: none;
     font-size: 16px;
     padding: 0 20px;
-    background: #006494;
+    background: #FF7733;
     color: #fff;
     transition: 0.3s;
     border-radius: 50px;
@@ -797,7 +797,7 @@ body {
   #footer .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #006494;
+    background: #FF7733;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
