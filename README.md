@@ -132,7 +132,7 @@ We are currently working as a team and try to help community so that no one slee
 *  Download the zip file or clone this repo using following command
    
      ``` bash
-         git clone https://github.com/shivammaniharsahu/Food-Filler.git
+         git clone https://github.com/AJAYKR00KJ/Hackmaniacs.git
      ```
 *  Install XAMPP to run server by this link
      ``` bash
@@ -152,7 +152,7 @@ We are currently working as a team and try to help community so that no one slee
      ```     
 *  Run the project on local server by this link
      ``` bash
-         https://github.com/AJAYKR00KJ/Hackmaniacs.git
+         http://localhost/templates/landing.php
      ```  
 *  Hurrey! 😎, Our project running on localhost  
 
