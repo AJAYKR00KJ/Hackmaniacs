@@ -90,7 +90,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
+  
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -135,9 +137,9 @@
                   </ul>
                 </li> 
                 <li class="drop-down"><a href="">Testimonials</a>
-                  <ul>
+                <ul>
                     <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="../../templates/testimonial.php">Listen from Users</a></li>
+                    <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
                     <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -151,7 +153,7 @@
           if (isset($_SESSION['admin_email'])) {
              echo" <img href='admin.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
              src='..\..\assets\img\prof.jpg'> 
-      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='admin.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout FROM ADMIN Pannel</b></a>  </button>
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='admin.php?logout='1''><b  style='color:#FF7733;font-size:15px;'>Logout FROM ADMIN Pannel</b></a>  </button>
         ";
           };
           ?>

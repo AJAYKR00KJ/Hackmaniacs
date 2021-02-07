@@ -10,7 +10,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <link rel="icon" href="../assets/img/favicon.png" type="image/gif" sizes="16x16">
+  <title>Meal-Virtue: Working for the needy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,7 +46,7 @@
           <li class="active"><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li><a href="registeredngo.php">Register Organisation</a></li>
+                <li><a href="registeredngo.php">Registered Organisation</a></li>
                 <li class="drop-down"><a href="">My Profile</a>
                   <ul>
                     <li><a href="DONAR/profile.php">Donar Profile</a></li>
@@ -56,7 +57,7 @@
                 <li class="drop-down"><a href="">Testimonials</a>
                   <ul>
                     <li><a href="leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="testimonial.php">Listen from Users</a></li>
+                    <li><a href="TESTIMONIAL/testimonial.php">Listen from Users</a></li>
                     <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -70,7 +71,7 @@
           if (isset($_SESSION['email'])) {
              echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
              src='..\assets\img\prof.jpg'> 
-      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='DONAR/profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='DONAR/profile.php?logout='1''><b  style='color:#FF7733;font-size:15px;'>Logout</b></a>  </button>
         ";
           };
           ?>
@@ -121,12 +122,16 @@
                     if($donated_q_num)
                     {
                         while ($donated_q_row = mysqli_fetch_assoc($donated_q_result)){ 
-                        echo '<div class="testimonial-item">';
-                        echo '<img src="../assets/img/testimonials/testimonials-1.jpeg" class="testimonial-img" alt="">';
-                        echo '<h3>Name: ' . $donated_q_row['firstname']. '</h3>';
-                        echo '<h4>Address: '. $donated_q_row['address']. '</h4>';
-                        echo '<h5>Points Earned: ' . $donated_q_row['overall_points']. '</h5>'; 
-                        echo '</div>'; 
+
+                          ?>
+                        <div class="testimonial-item">
+                        <img src="..\assets\img\users_profile_pic\<?php echo $donated_q_row['avatar']; ?>" class="testimonial-img" alt="">
+                        <h3>Name: <?php echo $donated_q_row['firstname'] ?> </h3>
+                        <h4>Address: <?php echo  $donated_q_row['address'] ?> </h4>
+                        <h5>Points Earned: <?php echo  $donated_q_row['overall_points'] ?> </h5> 
+                        </div>
+
+                        <?php
                         }
                     }
                     

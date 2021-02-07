@@ -121,7 +121,9 @@ it is profile.php
 <head>
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
+  <title>Meal-Virtue: Working for the needy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -169,30 +171,30 @@ it is profile.php
 
         <nav class="nav-menu d-none d-lg-block"> 
           <ul>
-                <li class="active"><a href="landing.php">Home</a></li> 
-                <li ><a href="about-us.html">About</a></li>
-                <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li><a href="ngoregister.php">Register Organisation</a></li>
+          <li class="active"><a href="../../templates/landing.php">Home</a></li> 
+                <li ><a href="../../templates/about-us.html">About</a></li>
+                <li><a href="../../templates/donate.php">Donate leftovers from event</a></li>
+                <li><a href="../../templates/registeredngo.php">Register Organisation</a></li> 
                 <li class="drop-down"><a href="">My Profile</a>
                   <ul>
-                    <li><a href="profile.php">Donar Profile</a></li>
-                    <li><a href="#">NGO Profile</a></li>
-                    <li><a href="../../server/admin/admin.php">Admin Pannel</a></li>
+                    <li><a href="../DONAR/profile.php">Donar Profile</a></li>
+                    <li><a href="../NGO/ngo_o_profile.php">NGO Profile</a></li>
+                    <li><a href="../ADMIN/admin.php">Admin Pannel</a></li>
                   </ul>
                 </li> 
                 <li class="drop-down"><a href="">Testimonials</a>
-                  <ul>
-                    <li><a href="leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="testimonial.php">Listen from Users</a></li>
-                    <li><a href="thankyou.php">Thank you</a></li>
+                <ul>
+                    <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
+                    <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
-                <li ><a href="contact.php">Contact US</a></li> 
+                <li ><a href="../../templates/contact.php">Contact US</a></li>
           </ul>
 
             <img href="profile.php"  class='nav-avatar' style="height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;"
                     src="..\..\assets\img\prof.jpg"> 
-            <button style="border:3px solid #000000;border-radius:8px 0px 8px 0px;"><a href="ngo_o_profile.php?logout='1'"><b  style="color:#006494;font-size:15px;">Logout</b></a>  </button>
+            <button style="border:3px solid #000000;border-radius:8px 0px 8px 0px;"><a href="ngo_o_profile.php?logout='1'"><b  style="color:#FF7733;font-size:15px;">Logout</b></a>  </button>
 
        </nav>
       </div>
@@ -204,10 +206,10 @@ it is profile.php
   
   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
-      <h1>Hello <?php echo $_SESSION['ngo_o_name']; ?></h1>    
-      <a id="modalActivate" type="button" class="btn-get-started scrollto" data-toggle="modal" data-target="#exampleModalPreview">Click here to redeem your points</a>
-      <a type="button" class="btn-get-started scrollto " 
-      href='share.php?email=<?php echo $_SESSION['ngo_o_email']; ?>'>Share your public profile</a>
+      <h1>Hello <?php echo $_SESSION['ngo_o_name']; ?></h1> 
+      <i class="bx bxs-right-arrow-alt get-started-icon"></i>   
+       <a type="button" class="btn-get-started scrollto " 
+      href='#myform'>Register You NGO</a>
    </div>
   </section><!-- End Hero -->
 
@@ -289,7 +291,7 @@ it is profile.php
           
           $conn = mysqli_connect($servername, $username, $password, $database);
           $zx=$_SESSION['ngo_o_email'];
-          $sql = "SELECT * FROM registered_ngo where owneremail='$zx' ORDER BY id DESC LIMIT 4";
+          $sql = "SELECT * FROM registered_ngo where owneremail='$zx' ORDER BY id DESC LIMIT 5";
           $result =  mysqli_query($conn, $sql);
 
           $num = mysqli_num_rows($result);
@@ -385,7 +387,7 @@ it is profile.php
 
               ?>      
                   
-            <div class="col-lg-12" style="background-color:#006494;border:1px solid black;margin:3px;border-radius:12px;"> 
+            <div class="col-lg-12" style="background-color:#FF7733;border:1px solid black;margin:3px;border-radius:12px;"> 
 
                 <div class="row"> 
                     <div class="col-lg-4" style="font-weight:bold;color:white;text-align: left;padding:20px;">

@@ -13,7 +13,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
+  
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,15 +60,9 @@
                   </ul>
                 </li> 
                 <li class="drop-down"><a href="">Testimonials</a>
-
                 <ul>
                     <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
                     <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
-=======
-                  <ul>
-                    <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="../../templates/testimonial.php">Listen from Users</a></li>
-
                     <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -82,7 +78,10 @@
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
       <h1>Check your profile</h1>
       <h2>You are already doing so much..It's time to redeem</h2>
-      <a href="#log" class="btn-get-started scrollto">Login</a>
+      <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#log" class="btn-get-started scrollto">Start donating</a>
+      </div>
     </div>
   </section><!-- End Hero -->
   

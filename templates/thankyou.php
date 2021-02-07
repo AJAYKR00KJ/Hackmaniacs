@@ -11,7 +11,8 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
+  <link rel="icon" href="../assets/img/favicon.png" type="image/gif" sizes="16x16">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -49,18 +50,18 @@
           <li class="active"><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li><a href="ngoregister.php">Register Organisation</a></li>
-                 <li class="drop-down"><a href="">My Profile</a>
+                <li><a href="registeredngo.php">Registered Organisation</a></li>
+                <li class="drop-down"><a href="">My Profile</a>
                   <ul>
-                    <li><a href="profile.php">Donar Profile</a></li>
-                    <li><a href="#">NGO Profile</a></li>
-                    <li><a href="../server/admin/admin.php">Admin Pannel</a></li>
+                    <li><a href="DONAR/profile.php">Donar Profile</a></li>
+                    <li><a href="NGO/ngo_o_profile.php">NGO Profile</a></li>
+                    <li><a href="ADMIN/admin.php">Admin Pannel</a></li>
                   </ul>
-                </li> 
+                </li>
                 <li class="drop-down"><a href="">Testimonials</a>
                   <ul>
                     <li><a href="leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="testimonial.php">Listen from Users</a></li>
+                    <li><a href="TESTIMONIAL/testimonial.php">Listen from Users</a></li>
                     <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -74,7 +75,7 @@
           if (isset($_SESSION['email'])) {
              echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
              src='..\assets\img\prof.jpg'> 
-      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='DONAR/profile.php?logout='1''><b  style='color:#FF7733;font-size:15px;'>Logout</b></a>  </button>
         ";
           };
           ?>
@@ -90,7 +91,10 @@
         <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
           <h1>Want to know where your food delivered?</h1>
           <h2>We will help you to find whome we are delevering your food .</h2>
-          <a href="#abouttt" class="btn-get-started scrollto">Let's Start</a>
+          <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#aboutt" class="btn-get-started scrollto">Let's Go</a>
+      </div>
         </div>
       </section><!-- End Hero -->
 

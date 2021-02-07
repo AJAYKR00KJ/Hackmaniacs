@@ -10,8 +10,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
   <meta content="" name="description">
+  <link rel="icon" href="../assets/img/favicon.png" type="image/gif" sizes="16x16">
   <meta content="" name="keywords">
 
   <!-- Google Fonts -->
@@ -27,7 +28,7 @@
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet"> 
 </head>
 
 <body>
@@ -46,12 +47,18 @@
           <li class="active"><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li><a href="ngoregister.php">Register Organisation</a></li>
-                <li><a href="profile.php">Your Profile</a></li>
+                <li><a href="registeredngo.php">Registered Organisation</a></li>
+                <li class="drop-down"><a href="">My Profile</a>
+                  <ul>
+                    <li><a href="DONAR/profile.php">Donar Profile</a></li>
+                    <li><a href="NGO/ngo_o_profile.php">NGO Profile</a></li>
+                    <li><a href="ADMIN/admin.php">Admin Pannel</a></li>
+                  </ul>
+                </li>
                 <li class="drop-down"><a href="">Testimonials</a>
                   <ul>
                     <li><a href="leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="testimonial.php">Listen from Users</a></li>
+                    <li><a href="TESTIMONIAL/testimonial.php">Listen from Users</a></li>
                     <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -65,7 +72,7 @@
           if (isset($_SESSION['email'])) {
              echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
              src='..\assets\img\prof.jpg'> 
-      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='DONAR/profile.php?logout='1''><b  style='color:#FF7733;font-size:15px;'>Logout</b></a>  </button>
         ";
           };
           ?>
@@ -80,40 +87,102 @@
   </header>
   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
-      <h1>You do a precious job with us...So feel proud</h1>
+      <h1>A single platform for donars to donate food and NGOs to collect</h1>
       <h2>We are dedicated towards that no one should sleep hungry</h2>
-      <a href="donate.php" class="btn-get-started scrollto">Have a wedding/restaurant..Donate</a>
+      <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#about" class="btn-get-started scrollto">Start donating</a>
+      </div>
     </div>
   </section><!-- End Hero -->
   <main id="main">
-    <section id="about" class="about">
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
       <div class="container">
 
-        <div class="row content">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-            <h2>"For some a snack, for some it's day's only meal"</h2>
-            <h3>We aim towards minimizing food wastage, which is a source of life for everyone</h3>
+        <div class="row">
+          <div class="col-xl-4 col-lg-5" data-aos="fade-up">
+            <div class="content">
+              <h3>Why Meal-Virtue</h3>
+              <p>
+                We are a platform helping you donate your leftover food after an event or party successfully without ny hassle. This will be donated to the underprevilidged.
+              </p>
+              <div class="text-center">
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
-            <p>
-              When throwing food away, try to donate first, if you can't, 
-              then compost it, and if you can't do that, throw it in the trash. 
-              Keeping this order in mind minimizes the amount of food that ends up on a landfill.
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Less food wastage is financially helpful</li>
-              <li><i class="ri-check-double-line"></i> Give it to us, we will redistribute it</li>
-              <li><i class="ri-check-double-line"></i> Food recycling helps in making a lot of stuff like manure etc. Don;t throw it in the trash</li>
-            </ul>
-            <p class="font-italic">
-              Donating to the needy is a great way to improve the conditions in your neighborhood or community. Donating food to the worthy people or organizations helps counter poverty, hunger and at the same time, it can improve harmony, friendliness, and trust among residents.
-            </p>
+          <div class="col-xl-8 col-lg-7 d-flex">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Donate to NGOs nearest to your location</h4>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Find the appropriate nutritional value your food provides</h4>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Get featured on the leaderboard, redeem points and many other perks..</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about section-bg">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative" data-aos="fade-right">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h4 data-aos="fade-up">About us</h4>
+            <h3 data-aos="fade-up">A multi service platform for NGO and Doners to acheive a hassle free donation process</h3>
+
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bx bxs-donate-heart"></i></div>
+              <h4 class="title"><a href="">Donor and NGO accounts</a></h4>
+              <p class="description">Register yourself on the website and donate easily</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-body"></i></div>
+              <h4 class="title"><a href="">Partners in Change</a></h4>
+              <p class="description">Are you working towards a common aim as us? Register your NGO and be our partners in change</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-map"></i></div>
+              <h4 class="title"><a href="">Map Based service</a></h4>
+              <p class="description">Donate to NGOs nearby to your location by monitoring on the MAP</p>
+            </div>
+
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-bar-chart-square"></i></div>
+              <h4 class="title"><a href="">Donate Raw food as well</a></h4>
+              <p class="description">List your items which are near expiry date and get an appropriate nutritional value of the food which is getting wasted</p>
+            </div>
+
           </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
-
     <section id="counts" class="counts">
       <div class="container">
 
@@ -144,59 +213,40 @@
       </div>
     </section><!-- End Counts Section -->
 
-    
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
+
+
+
+
         <div class="row">
-          <div class="col-lg-4">
-            <div class="section-title" data-aos="fade-right">
-              <h2>What we do?</h2>
-              <p>We are an organisation helping you donate the leftover food for unpreviliged as well as help you recycle your food.</p>
+          <div class="col-lg-12">
+            <div class="section-title" data-aos="zoom-in-up">
+              <h2>OUR PARTNERS</h2> 
+              <p>Who support us economically</p>
             </div>
           </div>
-          <div class="col-lg-8">
-            <div class="row">
-              <div class="col-md-6 d-flex align-items-stretch">
-                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                  <div class="icon"><i class="bx bxs-donate-heart"></i></div>
-                  <h4><a href="">Donate food</a></h4>
-                  <p>Do you have food leftover at wedding/party? Donate to us and we will distribute it to the needy</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                  <div class="icon"><i class="bx bx-body"></i></div>
-                  <h4><a href="">Partners in Change</a></h4>
-                  <p>Are you working towards a common aim as us? Register your NGO and be our partners in change</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="icon"><i class="bx bxs-discount"></i></div>
-                  <h4><a href="">Recieve back for what you give</a></h4>
-                  <p>Have a lot of leftover indeible food? Give it to us and get some aweome discounts at favorite eateries</p>
-                </div>
-              </div>
-
-              <div class="col-md-6 d-flex align-items-stretch mt-4">
-                <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-                  <div class="icon"><i class="bx bx-world"></i></div>
-                  <h4><a href="">Get featured</a></h4>
-                  <p>Be among the top donators food and get featured on our leaderboard for awesome rewards</p>
-                </div>
-              </div>
-
-            </div>
+          <div class="col-lg-3 col-sm-6 col-xs-12"  > 
+                <img style="width:190px;height:190px;" src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg" > 
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-12"  > 
+                <img style="width:190px;height:190px;" src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg" > 
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-12"  > 
+                <img style="width:190px;height:190px;" src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg" > 
+          </div>
+          <div class="col-lg-3 col-sm-6 col-xs-12"  > 
+                <img style="width:190px;height:190px;" src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg" > 
+          </div>
           </div>
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Testimonials Section -->
+
+    
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -205,7 +255,7 @@
         <div class="text-center" data-aos="zoom-in">
           <h3>Have a lot of food leftovers?</h3>
           <p> Register yourself as a user and get benefits of redeeming the points earned by donating food</p>
-          <a class="cta-btn" href="profile.php">Register/Login</a>
+          <a class="cta-btn" href="DONAR/profile.php">Register/Login</a>
         </div>
 
       </div>
@@ -269,6 +319,11 @@
 
       </div>
     </section><!-- End Testimonials Section -->
+
+
+
+
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -295,7 +350,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="landing.php">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="leaderboard.php">Leaderboard</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="profile.php">See Profile</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="DONAR/profile.php">See Profile</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Donate to US</a></li>
             </ul>
           </div>
@@ -334,6 +389,7 @@
   <script src="../assets/vendor/venobox/venobox.min.js"></script>
   <script src="../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="../assets/vendor/aos/aos.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>

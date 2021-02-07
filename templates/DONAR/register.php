@@ -15,7 +15,9 @@ include('../../server/server.php')
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
+  
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,15 +60,9 @@ include('../../server/server.php')
                   </ul>
                 </li> 
                 <li class="drop-down"><a href="">Testimonials</a>
-
                 <ul>
                     <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
                     <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
-=======
-                  <ul>
-                    <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="../../templates/testimonial.php">Listen from Users</a></li>
-
                     <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -80,8 +76,10 @@ include('../../server/server.php')
   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
       <h1>Become a user...And help others</h1>
-      <h2>How awesome is that if you get redeem points and coupons?</h2>
-      <a href="#log" class="btn-get-started scrollto">Register</a>
+      <h2>How awesome is that if you get redeem points and coupons?</h2><div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#log" class="btn-get-started scrollto">Start donating</a>
+      </div>
     </div>
   </section><!-- End Hero -->
 
@@ -103,7 +101,7 @@ include('../../server/server.php')
 
            <div class="col-lg-6 col-md-6 footer-contact"> 
            <div>
-               <label><span style="color:#006494;">*</span>Firstname</label>
+               <label><span style="color:#FF7733;">*</span>Firstname</label>
                <input type="text" name="firstname" placeholder="Enter your first name" value="<?php echo $firstname; ?>">
            </div>
            </div> 
@@ -111,7 +109,7 @@ include('../../server/server.php')
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#006494;">*</span>Lastname</label>
+               <label><span style="color:#FF7733;">*</span>Lastname</label>
                <input type="text" name="lastname" placeholder="Enter Last name" value="<?php echo $lastname; ?>">
            </div>
            </div>
@@ -119,21 +117,21 @@ include('../../server/server.php')
 
            <div class="col-lg-6 col-md-6 footer-contact"> 
            <div>
-               <label><span style="color:#006494;">*</span>Email</label>
+               <label><span style="color:#FF7733;">*</span>Email</label>
                <input type="text" name="email" placeholder="abc@gmail.com" value="<?php echo $email; ?>">
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#006494;">*</span>Mobile</label>
+               <label><span style="color:#FF7733;">*</span>Mobile</label>
                <input type="tel" name="mobile" placeholder="888 888 8888" maxlength="12"  title="Ten digits code" required value="<?php echo $mobile; ?>">
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#006494;">*</span>Birthday</label>
+               <label><span style="color:#FF7733;">*</span>Birthday</label>
                <input type="date" name="dob" placeholder="20-10-2020" value="<?php echo $dob; ?>" >
            </div>
            </div>
@@ -147,28 +145,28 @@ include('../../server/server.php')
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#006494;">*</span>Full Address</label>
+               <label><span style="color:#FF7733;">*</span>Full Address</label>
                <input type="text" name="address" placeholder="Raipur" value="<?php echo $address; ?>">
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#006494;">*</span>Pincode</label>
+               <label><span style="color:#FF7733;">*</span>Pincode</label>
                <input type="text" name="pincode"  maxlength="6" placeholder="123456" value="<?php echo $pincode; ?>" >
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#006494;">*</span>Password</label>
+               <label><span style="color:#FF7733;">*</span>Password</label>
                <input type="password" name="password_1" placeholder="Enter your password here" >
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#006494;">*</span>Confirm Password</label>
+               <label><span style="color:#FF7733;">*</span>Confirm Password</label>
                <input type="password" name="password_2" placeholder="Confirm password here" >
            </div>
            </div>
@@ -182,7 +180,7 @@ include('../../server/server.php')
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-           <span style="color:#006494;">*</span>Required all fields
+           <span style="color:#FF7733;">*</span>Required all fields
            </div>
            </div>
            

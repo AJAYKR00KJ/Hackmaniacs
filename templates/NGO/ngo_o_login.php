@@ -13,7 +13,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
+  <title>Meal-Virtue: Working for the needy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -46,25 +48,25 @@
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-          <li ><a href="landing.php">Home</a></li> 
-                <li ><a href="about-us.html">About</a></li>
-                <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li><a href="ngoregister.php">Register Organisation</a></li>
+          <li class="active"><a href="../../templates/landing.php">Home</a></li> 
+                <li ><a href="../../templates/about-us.html">About</a></li>
+                <li><a href="../../templates/donate.php">Donate leftovers from event</a></li>
+                <li><a href="../../templates/registeredngo.php">Register Organisation</a></li> 
                 <li class="drop-down"><a href="">My Profile</a>
                   <ul>
-                    <li><a href="profile.php">Donar Profile</a></li>
-                    <li><a href="#">NGO Profile</a></li>
-                    <li><a href="../../server/admin/admin.php">Admin Pannel</a></li>
+                    <li><a href="../DONAR/profile.php">Donar Profile</a></li>
+                    <li><a href="../NGO/ngo_o_profile.php">NGO Profile</a></li>
+                    <li><a href="../ADMIN/admin.php">Admin Pannel</a></li>
                   </ul>
                 </li> 
                 <li class="drop-down"><a href="">Testimonials</a>
-                  <ul>
-                    <li><a href="leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="testimonial.php">Listen from Users</a></li>
-                    <li><a href="thankyou.php">Thank you</a></li>
+                <ul>
+                    <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
+                    <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
-                <li ><a href="contact.php">Contact US</a></li>
+                <li ><a href="../../templates/contact.php">Contact US</a></li>
           </ul>
         </nav>
       </div>
@@ -76,7 +78,10 @@
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
       <h1>Signin here NGO owner</h1>
       <h2>You are already doing so much..It's time to Register yur NGO's</h2>
-      <a href="#log" class="btn-get-started scrollto">Login</a>
+      <div class="d-flex align-items-center">
+        <i class="bx bxs-right-arrow-alt get-started-icon"></i>
+        <a href="#log" class="btn-get-started scrollto">Create an account</a>
+      </div>
     </div>
   </section><!-- End Hero -->
   
@@ -89,7 +94,7 @@
        <div class="login-container" > 
             <form method="post" action="ngo_o_login.php">
                 <h1>LOGIN</h1>
-                <?php include('errors.php'); ?>
+                <?php include('../errors.php'); ?>
                 <div>
                     <input type="hidden" name="act" value="loginhere"/> 
                     <label>Email</label>
@@ -100,7 +105,7 @@
                     <input type="password" name="password" placeholder="Enter your password here" value="">
                 </div>
                 <input type="submit" name="ngo_o_login" value="LOGIN">
-                <a href="register.php" style="font-size:16px;"><div>Not a member,SignUP Here</a> 
+                <a href="ngo_o_signup.php" style="font-size:16px;"><div>Not a member,SignUP Here</a> 
                     
             </form>
 
@@ -108,7 +113,7 @@
                     <input type="button" onClick="$('#reply').toggle();" style="font-size:16px;" value="Forgot Password?"><div> 
                     
                     <div id="reply" style="display:none;justify-content: center;">
-                    <?php include('errors.php'); ?>
+                    <?php include('..\errors.php'); ?>
                         <label>Enter Registered Email Id</label>
                             <form method="post" action="login.php">
                             <input type="hidden" name="act" value="forgot"/> 

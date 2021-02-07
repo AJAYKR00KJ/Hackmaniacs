@@ -14,7 +14,7 @@
 
 if (!isset($_SESSION['email'])) {
     $_SESSION['msg'] = "You must log in first";
-    header('location: ../NGO/login.php');
+    header('location: ../DONAR/login.php');
 }
 if (isset($_GET['logout'])) {
     session_destroy();
@@ -33,7 +33,8 @@ if (isset($_GET['logout'])) {
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -93,8 +94,8 @@ if (isset($_GET['logout'])) {
 
           if (isset($_SESSION['email'])) {
              echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
-             src='..\assets\img\prof.jpg'> 
-      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='../DONAR/profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
+             src='..\..\assets\img\prof.jpg'> 
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='../DONAR/profile.php?logout='1''><b  style='color:#FF7733;font-size:15px;'>Logout</b></a>  </button>
         ";
           };
           ?>

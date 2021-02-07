@@ -49,7 +49,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <link rel="icon" href="../assets/img/favicon.png" type="image/gif" sizes="16x16">
+  <title>Meal-Virtue: Working for the needy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   
@@ -84,18 +85,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
           <li class="active"><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li><a href="ngoregister.php">Register Organisation</a></li>
+                <li><a href="registeredngo.php">Registered Organisation</a></li>
                 <li class="drop-down"><a href="">My Profile</a>
                   <ul>
-                    <li><a href="profile.php">Donar Profile</a></li>
-                    <li><a href="#">NGO Profile</a></li>
-                    <li><a href="../server/admin/admin.php">Admin Pannel</a></li>
+                    <li><a href="DONAR/profile.php">Donar Profile</a></li>
+                    <li><a href="NGO/ngo_o_profile.php">NGO Profile</a></li>
+                    <li><a href="ADMIN/admin.php">Admin Pannel</a></li>
                   </ul>
-                </li> 
+                </li>
                 <li class="drop-down"><a href="">Testimonials</a>
                   <ul>
                     <li><a href="leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="testimonial.php">Listen from Users</a></li>
+                    <li><a href="TESTIMONIAL/testimonial.php">Listen from Users</a></li>
                     <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -106,13 +107,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
           <?php
 
-if (isset($_SESSION['email'])) {
-   echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
-   src='..\assets\img\prof.jpg'> 
-<button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
-";
-};
-?>
+          if (isset($_SESSION['email'])) {
+             echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
+             src='..\assets\img\prof.jpg'> 
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='DONAR/profile.php?logout='1''><b  style='color:#FF7733;font-size:15px;'>Logout</b></a>  </button>
+        ";
+          };
+          ?>
 
         </nav>
       </div>
@@ -182,7 +183,7 @@ if (isset($_SESSION['email'])) {
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validate"></div>
                 </div> 
-                <div class="text-center"><button style="border:2px solid white;border-radius:20px;width:140px;height:40px;color:white; background-color:#006494;" type="submit">Send Message</button></div>
+                <div class="text-center"><button style="border:2px solid white;border-radius:20px;width:140px;height:40px;color:white; background-color:#FF7733;" type="submit">Send Message</button></div>
               </form>
             </div>
           </div>

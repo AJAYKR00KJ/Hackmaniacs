@@ -44,7 +44,9 @@ it is profile.php
 <head>
 <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
+  
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -104,11 +106,7 @@ it is profile.php
                 <li class="drop-down"><a href="">Testimonials</a>
                   <ul>
                     <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
-
                     <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
-=======
-                    <li><a href="../../templates/testimonial.php">Listen from Users</a></li>
-
                     <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -118,11 +116,8 @@ it is profile.php
           </ul>
 
           <img href="profile.php"  class='nav-avatar' style="height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;"
-
                 src="..\..\assets\img\prof.jpg"> 
-=======
-          
-         <button style="border:3px solid #000000;border-radius:8px 0px 8px 0px;"><a href="profile.php?logout='1'"><b  style="color:#006494;font-size:15px;">Logout</b></a>  </button>
+         <button style="border:3px solid #000000;border-radius:8px 0px 8px 0px;"><a href="profile.php?logout='1'"><b  style="color:#FF7733;font-size:15px;">Logout</b></a>  </button>
            
            
           
@@ -134,13 +129,14 @@ it is profile.php
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
       <h1>Hello <?php echo $_SESSION['firstname']; ?></h1>   
       <h2>You have <?php echo $_SESSION['remain']; ?> redeem points from what you have donoted</h2>
+      <i class="bx bxs-right-arrow-alt get-started-icon"></i>
       <a id="modalActivate" type="button" class="btn-get-started scrollto" data-toggle="modal" data-target="#exampleModalPreview">Click here to redeem your points</a>
+      <i class="bx bxs-right-arrow-alt get-started-icon"></i>
       <a type="button" class="btn-get-started scrollto " 
       href='../share.php?email=<?php echo $_SESSION['email']; ?>'>Share your public profile</a>
-
+      <i class="bx bxs-right-arrow-alt get-started-icon"></i>
       <a type="button" class="btn-get-started scrollto " 
       href='recharge.php'>Save your food</a>
-
    </div>
   </section><!-- End Hero -->
 
@@ -517,7 +513,7 @@ if($num)
               <div class="user-heading round">
                   <a href="#">
                       <!-- <img src="..\assets\img\prof1.jpg" alt=""> -->
-                      <img src="..\assets\img\users_profile_pic\<?php echo $_SESSION['avatar']; ?>" alt="">
+                      <img src="..\..\assets\img\users_profile_pic\<?php echo $_SESSION['avatar']; ?>" alt="">
 
                       
                        

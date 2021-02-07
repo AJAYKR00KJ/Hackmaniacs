@@ -55,9 +55,11 @@ if (isset($_POST['login_admin'])) {
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Food-Filler: Working for the needy</title>
+  <title>Meal-Virtue: Working for the needy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  
+  <link rel="icon" href="../../assets/img/favicon.png" type="image/gif" sizes="16x16">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -98,9 +100,9 @@ if (isset($_POST['login_admin'])) {
                   </ul>
                 </li> 
                 <li class="drop-down"><a href="">Testimonials</a>
-                  <ul>
+                <ul>
                     <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="../../templates/testimonial.php">Listen from Users</a></li>
+                    <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
                     <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
@@ -118,6 +120,8 @@ if (isset($_POST['login_admin'])) {
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
       <h1>ADMIN LOGIN</h1>
       <h2>ONLY ADMIN ALLOWED</h2>
+      
+      <i class="bx bxs-right-arrow-alt get-started-icon"></i>
       <a href="#log" class="btn-get-started scrollto">Login</a>
     </div>
   </section><!-- End Hero -->
