@@ -1,6 +1,6 @@
 
 <?php 
-include "../config/dbconfig.php"; 
+include "../../config/dbconfig.php"; 
 
 
  if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -24,7 +24,7 @@ include "../config/dbconfig.php";
                                  VALUES ('$t_name', '$t_address', '$test_text')";
       $t_result =  mysqli_query($conn, $sql); 
 
-      header("Location:../templates/testimonial.php"); 
+      header("Location:../../templates/TESTIMONIAL/testimonial.php"); 
      
  }
     
