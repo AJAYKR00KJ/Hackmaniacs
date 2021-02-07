@@ -2,7 +2,7 @@
 
 # Meal-Virtue
 
-SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!  
+Virtue generally means an act of high moral values and helping others. And what could be a better feeling than feeding people who are unprevildeged and are barely even able to afford a day's meal. Meal-Virtue is an online web portal which helps you carry out a hassle free donation process. You can donate, register your NGO, get the nutritional value of your food and get awarded for it. Donation are carried out less in number, as people do not find the right NGO for donation, and NGO search for people who want to donate. The platform links them both. SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!  
 
 ##  Link for the Presentation- 
    >  #
@@ -166,7 +166,7 @@ We are currently working as a team and try to help community so that no one slee
 >| ------------- |:---------------------:|:--------------------------------------------:|:-----------------------------------------:| 
 >| 1             | Shivam Manihar Sahu   | Manage Databases- Worked on sql queries      |  https://github.com/shivammaniharsahu/    |
 >| 2             | Shashwat Awasthi      | UI/UX design of Website, Worked on frontend  |  https://github.com/ShashwatAwasthi04     |
->| 3             | Rahul Singh Kushawaha | Worked on frontend of project,database work  |  https://github.com/Rahul-skush           | 
+>| 3             | Rahul Singh           | Worked on frontend of project,database work  |  https://github.com/Rahul-skush           | 
 >| 4             | Ajay Kumar            | Worked on PHP backend, Query Processing      |  https://github.com/AJAYKR00KJ            |
 
 ---
