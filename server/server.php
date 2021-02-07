@@ -1,6 +1,11 @@
-
+ 
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script> 
 <?php 
-include "../config/dbconfig.php"; 
+include "../../config/dbconfig.php"; 
+
 
 session_start();
 
@@ -115,15 +120,17 @@ if (isset($_POST['reg_user']))
   	$password = md5($password_1);//encrypt the password before saving in the database
 
 
+
+   
+
     //avatar
 
- 
         
-        $file_name = $avatar[name]; 
-        $file_type = $avatar[type];
-        $file_size = $avatar[size];
-        $file_tmp_loc = $avatar[tmp_name];
-        $file_store_location = "../assets/img/users_profile_pic/".$email. ' ' .$file_name; 
+        $file_name = $avatar['name']; 
+        $file_type = $avatar['type'];
+        $file_size = $avatar['size'];
+        $file_tmp_loc = $avatar['tmp_name'];
+        $file_store_location = "../../assets/img/users_profile_pic/".$email. ' ' .$file_name; 
         move_uploaded_file($file_tmp_loc, $file_store_location);
 
         $users_profile_pic_name =$email. ' ' .$file_name;
@@ -145,11 +152,76 @@ if (isset($_POST['reg_user']))
     $_SESSION['pincode'] = $pincode; 
     $_SESSION['avatar'] = $users_profile_pic_name; 
     $_SESSION['success'] = "You are now logged in";
+    $_SESSION['rg'] = "1";
     
-     
+      
 
     // header('location: ../Front_end/profile.html');
-    header('location: ../templates/profile.php'); 
+    //header('location: ../templates/profile.php'); 
+      header( "refresh:3; url= ../DONAR/profile.php" ); 
+     //Notification here
+
+     echo"
+
+     <script>
+     
+     sendn('$email','$password_1', '$firstname', '$mobile', '$dob');
+        function sendn(usermail,userpassword, firstname, mobile, dob){
+          console.log(usermail);
+          console.log('hi');
+          
+          var name = 'Food Filler Company';
+          
+          var subject = 'Your Registration Successful';
+          var message = 'Please Keep all information safe, Use email and password for login';
+          var thank   = 'Thanks and Regards';
+          var team    = 'Shivam Shashwat Ajay Rahul , FoodFiller-Team';
+          var foodemail    = 'nawabhiba700@gmail.com';
+      
+      
+        var Body=   'Company-Name:'+name+ 
+                    '<br><br>Glad to see you here' +
+                    '<br>Dear ' +firstname+
+                    '<br><br>Your registered Email is: '+ usermail +
+                    '<br>Your Password is: '+ userpassword +
+                    '<br>Your registered mobile number is: '+ mobile +
+                    '<br>Your DOB is: '+ dob +
+                    '<br><br>Message: '+message+
+                    '<br>If any problem occure please contact Food-Filler Team'+
+                    '<br><br>'+
+                    '<br>'+thank+
+                    '<br>Team: '+team+
+                    '<br>Food-Filler Mail: '+foodemail; 
+      
+          Email.send({
+            SecureToken:'fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f',
+            To: usermail,
+            From: 'nawabhiba700@gmail.com',
+            Subject: subject,
+            Body: Body
+          }).then(
+            message =>{
+              //console.log (message);
+              if(message=='OK'){
+              alert('You have successfully registered. Please check your registered Mail for more information !');
+              }
+              else{
+                console.error (message);
+                alert('There is error at sending message. ')
+                
+              }
+      
+            }
+          );
+      
+        }
+      
+     
+     </script>
+
+     ";
+
+ //Notification End here
   }
 }
 
@@ -221,9 +293,118 @@ if (isset($_POST['login_user'])) {
                 $_SESSION['pincode'] = $row['pincode']; 
                 $_SESSION['avatar'] = $row['avatar'];
                 $_SESSION['remain'] = $row['overall_points'];  
-                header('location: ../templates/profile.php'); 
+                header('location: ../DONAR/profile.php'); 
             }
             
+        }
+ 
+    }
+  }
+
+
+
+
+
+
+
+  // Forgot Password
+if (isset($_POST['forgot'])) {
+    $email = mysqli_real_escape_string($db, $_POST['forgot_email']); 
+  
+    if (empty($email)) {
+        array_push($errors, "Email is required");
+    } 
+ 
+ 
+    if (count($errors) == 0) {
+         
+        //echo $email;
+        $donated_query = "SELECT * FROM users WHERE email='$email' ";
+        $donated_result = mysqli_query($db, $donated_query); 
+        $donated_num = mysqli_num_rows($donated_result);
+
+        //echo $donated_num;
+         
+        if($donated_num!=1)
+        {
+            array_push($errors, "Please INPUT Registered Email Id"); 
+        }
+        else
+        {  
+             
+                function randomPassword() {
+                $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+                $pass = array(); //remember to declare $pass as an array
+                $alphaLength = strlen($alphabet) - 1; //put the length -1 in cache
+                for ($i = 0; $i < 8; $i++) {
+                    $n = rand(0, $alphaLength);
+                    $pass[] = $alphabet[$n];
+                }
+                return implode($pass); //turn the array into a string
+               }
+
+                $newPassword = randomPassword();
+
+                //echo $newPassword;
+
+                $password = md5($newPassword);
+
+                mysqli_query($db, "UPDATE `users` SET `password` = '$password'  WHERE `users`.`email` = '$email'");
+  
+
+                echo"
+
+                <script>
+                 
+                sendr('$email','$newPassword');
+                function sendr(usermail,userpassword){
+                    console.log(usermail);
+                    console.log('hi');
+                    
+                     var name = 'Food Filler Company';
+                     
+                     var subject = 'Your New Password';
+                     var message = 'Please Keep it safe';
+                     var thank   = 'Thanks and Regards';
+                     var team    = 'Shivam Shashwat Ajay Rahul , FoodFiller-Team';
+                     var foodemail    = 'nawabhiba700@gmail.com';
+               
+              
+                  var Body=   'Company-Name:'+name+ 
+                              '<br><br>Your New Password is: '+ userpassword +
+                              '<br><br>Message: '+message+
+                              '<br>If any problem occure please contact Food-Filler Team'+
+                              '<br><br>'+
+                              '<br>'+thank+
+                              '<br>Team: '+team+
+                              '<br>Food-Filler Mail: '+foodemail; 
+              
+                    Email.send({
+                      SecureToken:'fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f',
+                      To: usermail,
+                      From: 'nawabhiba700@gmail.com',
+                      Subject: subject,
+                      Body: Body
+                    }).then(
+                      message =>{
+                        //console.log (message);
+                        if(message=='OK'){
+                        alert('Your New password Has been sent to your registered Email Id. Please Login With Updated Password');
+                        }
+                        else{
+                          console.error (message);
+                          alert('There is error at sending message. ')
+                          
+                        }
+              
+                      }
+                    );
+              
+                  }
+                </script>
+
+                ";
+                //header('location: nwlogin.php');  
         }
  
     }
