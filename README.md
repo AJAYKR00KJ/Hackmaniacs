@@ -5,10 +5,10 @@
 Virtue generally means an act of high moral values and helping others. And what could be a better feeling than feeding people who are unprevildeged and are barely even able to afford a day's meal. Meal-Virtue is an online web portal which helps you carry out a hassle free donation process. You can donate, register your NGO, get the nutritional value of your food and get awarded for it. Donation are carried out less in number, as people do not find the right NGO for donation, and NGO search for people who want to donate. The platform links them both. SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!  
 
 ##  Link for the Presentation- 
-   >  #
+   >  # https://drive.google.com/file/d/1MZekp1q--CpMX2mI3Yabae0YJCXtsPDi/view?usp=sharing
 
 ##  Link for the Video- 
-   >  #
+   >  # https://youtu.be/Yd_0JrKLVHg
 
 SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!
  
