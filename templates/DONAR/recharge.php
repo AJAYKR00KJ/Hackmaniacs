@@ -6,9 +6,11 @@
 
 <?php 
   include "../../config/dbconfig.php";
+
   include('../../server/server.php') ; 
-  //include "name.php";
- //session_start();
+ 
+ session_start();
+
    
 
 
@@ -97,6 +99,7 @@ it is profile.php
          
 
           <ul>
+
 		  <li class="active"><a href="../../templates/landing.php">Home</a></li> 
                 <li ><a href="../../templates/about-us.html">About</a></li>
                 <li><a href="../../templates/donate.php">Donate leftovers from event</a></li>
@@ -116,6 +119,21 @@ it is profile.php
                   </ul>
                 </li>
                 <li ><a href="../../templates/contact.php">Contact US</a></li>
+=======
+          <li class="active"><a href="landing.php">Home</a></li> 
+                <li ><a href="about-us.html">About</a></li>
+                <li><a href="donate.php">Donate leftovers from event</a></li>
+                <li><a href="ngoregister.php">Register Organisation</a></li>
+                <li><a href="profile.php">Your Profile</a></li>
+                <li class="drop-down"><a href="">Testimonials</a>
+                  <ul>
+                    <li><a href="leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="TESTIMONIAL/testimonial.php">Listen from Users</a></li>
+                    <li><a href="thankyou.php">Thank you</a></li>
+                  </ul>
+                </li>
+                <li ><a href="contact.php">Contact US</a></li>
+
            
             
           </ul>
