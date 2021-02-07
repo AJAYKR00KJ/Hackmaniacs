@@ -6,9 +6,11 @@
 
 <?php 
   include "../../config/dbconfig.php";
-  //include('../../server/server.php') ; 
-  //include "name.php";
+
+  include('../../server/server.php') ; 
+ 
  session_start();
+
    
 
 
@@ -97,6 +99,27 @@ it is profile.php
          
 
           <ul>
+
+		  <li class="active"><a href="../../templates/landing.php">Home</a></li> 
+                <li ><a href="../../templates/about-us.html">About</a></li>
+                <li><a href="../../templates/donate.php">Donate leftovers from event</a></li>
+                <li><a href="../../templates/registeredngo.php">Registered Organisation</a></li> 
+                <li class="drop-down"><a href="">My Profile</a>
+                  <ul>
+                    <li><a href="../DONAR/profile.php">Donar Profile</a></li>
+                    <li><a href="../NGO/ngo_o_profile.php">NGO Profile</a></li>
+                    <li><a href="../ADMIN/admin.php">Admin Pannel</a></li>
+                  </ul>
+                </li> 
+                <li class="drop-down"><a href="">Testimonials</a>
+                  <ul>
+                    <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
+                    <li><a href="../../templates/thankyou.php">Thank you</a></li>
+                  </ul>
+                </li>
+                <li ><a href="../../templates/contact.php">Contact US</a></li>
+=======
           <li class="active"><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
@@ -110,6 +133,7 @@ it is profile.php
                   </ul>
                 </li>
                 <li ><a href="contact.php">Contact US</a></li>
+
            
             
           </ul>

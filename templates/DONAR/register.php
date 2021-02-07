@@ -58,9 +58,15 @@ include('../../server/server.php')
                   </ul>
                 </li> 
                 <li class="drop-down"><a href="">Testimonials</a>
+
+                <ul>
+                    <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="../TESTIMONIAL/testimonial.php">Listen from Users</a></li>
+=======
                   <ul>
                     <li><a href="../../templates/leaderboard.php">Our Leaderboard</a></li>
                     <li><a href="../../templates/testimonial.php">Listen from Users</a></li>
+
                     <li><a href="../../templates/thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
